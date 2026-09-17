@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="XSS Lab — an interactive defensive Cross-Site Scripting course.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-src 'self' blob:;">
+  <title>XSS Lab — Learn. Practice. Protect.</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <button class="brand" data-section="home" aria-label="Go to XSS Lab home">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-copy">
+        <strong>XSS LAB</strong>
+        <small>CROSS-SITE SCRIPTING EDUCATION</small>
+      </span>
+    </button>
+
+    <div class="search">
+      <label class="sr-only" for="search-input">Search XSS Lab</label>
+      <input id="search-input" type="search" placeholder="Search topics, glossary, examples…" autocomplete="off">
+      <kbd>Ctrl K</kbd>
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+
+    <nav class="top-actions" aria-label="Quick navigation">
+      <button data-section="practice">⌁ Lab</button>
+      <button data-section="glossary">▤ Glossary</button>
+      <button data-section="quiz">🏆 Quiz</button>
+      <button id="adhd-toggle" class="accent-button" aria-pressed="false">🧠 ADHD MODE</button>
+      <button id="motion-toggle" aria-label="Toggle reduced motion">◌</button>
+      <button id="menu-toggle" class="mobile-only" aria-label="Open course menu">☰</button>
+    </nav>
+  </header>
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-heading">
+        <span>COURSE MODULES</span>
+        <span>⌃</span>
+      </div>
+      <nav id="course-nav" aria-label="Course modules"></nav>
+
+      <section class="sidebar-card">
+        <div class="card-label purple">🧠 LEARNING MODE</div>
+        <p>Short sections, simpler wording, TL;DR boxes and expandable technical detail.</p>
+        <button id="adhd-sidebar-toggle" class="secondary-button">Enable ADHD Mode</button>
+      </section>
+
+      <section class="sidebar-card shortcuts">
+        <div class="card-label">KEYBOARD SHORTCUTS</div>
+        <p><kbd>/</kbd> Search</p>
+        <p><kbd>L</kbd> Lab</p>
+        <p><kbd>M</kbd> ADHD mode</p>
+        <p><kbd>?</kbd> Shortcuts</p>
+        <p><kbd>Esc</kbd> Close overlays</p>
+      </section>
+    </aside>
+
+    <main id="main" tabindex="-1"></main>
+
+    <aside class="progress-panel">
+      <section class="progress-card">
+        <div class="card-label">YOUR PROGRESS</div>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <strong id="progress-text">0 / 15 modules completed</strong>
+        <p id="progress-message">Start with the basics.</p>
+      </section>
+
+      <section class="progress-card">
+        <div class="card-label">MODULES</div>
+        <div id="recent-list"></div>
+      </section>
+
+      <section class="progress-card safety-card">
+        <div class="card-label cyan">🛡 SAFETY FIRST</div>
+        <p>Only test systems you own or have explicit permission to assess. This Lab never accepts arbitrary external URLs.</p>
+      </section>
+
+      <button id="mark-learned" class="learn-button">✓ Mark current module learned</button>
+    </aside>
+  </div>
+
+  <footer>
+    <span>⌁ XSS LAB · EDUCATIONAL USE ONLY</span>
+    <span>Understand how systems fail. Build them safer.</span>
+    <span>● LOCAL · NO TELEMETRY</span>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <h2 id="modal-title">Keyboard shortcuts</h2>
+      <p><kbd>/</kbd> Search · <kbd>L</kbd> Lab · <kbd>M</kbd> ADHD mode · <kbd>?</kbd> Shortcuts · <kbd>Esc</kbd> Close</p>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/ui.js" defer></script>
+  <script src="assets/js/lab.js" defer></script>
+  <script src="assets/js/quiz.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
