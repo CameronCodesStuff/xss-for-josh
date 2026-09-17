@@ -1,0 +1,79 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 70px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(5, 7, 8, .95);
+  backdrop-filter: blur(12px);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr) 260px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.sidebar,
+.progress-panel {
+  min-width: 0;
+  padding: 20px 14px;
+}
+
+.sidebar {
+  border-right: 1px solid var(--line);
+}
+
+.progress-panel {
+  border-left: 1px solid var(--line);
+}
+
+main {
+  min-width: 0;
+  padding: 28px 26px;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.search input,
+.wide-input,
+.lab-controls select {
+  width: 100%;
+  padding: 10px 46px 10px 13px;
+  border: 1px solid #29443e;
+  border-radius: var(--radius-md);
+  outline: none;
+  background: #080c0d;
+}
+
+.search kbd {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--line);
+  color: #4f6c62;
+  font-size: 10px;
+}

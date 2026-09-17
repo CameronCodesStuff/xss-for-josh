@@ -1,0 +1,26 @@
+:root {
+  --bg: #050708;
+  --panel: #0a1010;
+  --panel-soft: #080d0e;
+  --panel-raised: #0d1514;
+  --line: #1b3530;
+  --line-strong: #2b5549;
+
+  --text: #dceae5;
+  --muted: #78918a;
+  --green: #53ff88;
+  --cyan: #3fe6ff;
+  --purple: #c47dff;
+  --red: #ff5570;
+  --yellow: #ffe56b;
+
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 12px;
+
+  --shadow-panel: 0 0 28px rgba(83, 255, 136, .07);
+  --shadow-green: 0 0 20px rgba(83, 255, 136, .12);
+  --shadow-purple: 0 0 20px rgba(196, 125, 255, .12);
+
+  --font: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+}
