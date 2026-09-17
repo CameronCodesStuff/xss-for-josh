@@ -681,6 +681,10 @@
   place-items: center;
   background: rgba(0, 0, 0, .75);
 }
+/* fixed line 685-687 pray that it works now @frostycoding */
+.modal[hidden] {
+  display: none
+}
 
 .modal-inner {
   position: relative;
