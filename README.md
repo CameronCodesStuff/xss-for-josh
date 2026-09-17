@@ -23,8 +23,6 @@ XSS-Lab/
         └── app.js
 ```
 
-The project is deliberately split by responsibility instead of putting the whole site into one giant file.
-
 ## Run
 
 Open `index.html` in a modern browser, or serve the folder from a local static web server.
