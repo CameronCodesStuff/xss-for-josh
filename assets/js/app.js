@@ -492,8 +492,8 @@ list.append(item);`)}
         $("#search-input").focus();
         return;
       }
-
-      if (typing) return;
+//fixed line 496 due to esc not working for keybord short cuts @frostycoding
+      if (typing && event.key !== "Escape") return;
       if (event.key === "/") { event.preventDefault(); $("#search-input").focus(); }
       if (event.key.toLowerCase() === "l") show("practice");
       if (event.key.toLowerCase() === "m") toggleADHD();
